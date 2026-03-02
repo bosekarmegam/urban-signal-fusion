@@ -7,6 +7,8 @@
   [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
   [![FastAPI](https://img.shields.io/badge/FastAPI-0.110.0-009688.svg)](https://fastapi.tiangolo.com)
   [![Streamlit](https://img.shields.io/badge/Streamlit-1.33.0-FF4B4B.svg)](https://streamlit.io)
+
+  <h3><a href="https://urban-signal-fusion.streamlit.app/">👉 View Live Dashboard Here 👈</a></h3>
 </div>
 
 ---
