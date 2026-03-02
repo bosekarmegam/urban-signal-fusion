@@ -1,7 +1,0 @@
-anomaly
-api
-cache
-config
-dashboard
-fusion
-ingestion

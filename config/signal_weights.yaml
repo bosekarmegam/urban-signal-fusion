@@ -1,9 +1,0 @@
-# Signal Weights configuration for Urban Signal Fusion
-# Used to calculate the composite City Stress Index
-
-weights:
-  transit: 0.25         # transit.delays (minutes_delay)
-  noise: 0.20           # noise.sensors (dB)
-  crowd: 0.20           # crowd.density (persons/m²)
-  heat: 0.20            # heat.island (°C above avg)
-  accessibility: 0.15   # accessibility.events (active outages)
