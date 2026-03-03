@@ -101,5 +101,3 @@ Contributions are absolutely welcome! Please feel free to submit a Pull Request.
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-> **Developer Note:**
-> Don't forget to upload a custom social media preview image (1280x640px) in the repository settings to ensure a consistent and professional look when sharing project links!
