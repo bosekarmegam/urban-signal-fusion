@@ -3,7 +3,7 @@ from fastapi import FastAPI
 import structlog
 from config.settings import settings
 
-from api.routers import scores, anomalies, history, export
+from api.routers import scores, anomalies, history, export, locations
 
 logger = structlog.get_logger()
 
@@ -19,6 +19,7 @@ app.include_router(scores.router, prefix="/api/v1")
 app.include_router(anomalies.router, prefix="/api/v1")
 app.include_router(history.router, prefix="/api/v1")
 app.include_router(export.router, prefix="/api/v1")
+app.include_router(locations.router, prefix="/api/v1")
 
 @app.get("/health")
 def health_check():

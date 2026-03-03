@@ -6,7 +6,7 @@
   [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
   [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
   [![FastAPI](https://img.shields.io/badge/FastAPI-0.110.0-009688.svg)](https://fastapi.tiangolo.com)
-  [![Streamlit](https://img.shields.io/badge/Streamlit-1.33.0-FF4B4B.svg)](https://streamlit.io)
+  [![React](https://img.shields.io/badge/React-18.x-61DAFB.svg)](https://react.dev)
 
   <h3><a href="https://urban-signal-fusion.streamlit.app/">👉 View Live Dashboard Here 👈</a></h3>
 </div>
@@ -24,7 +24,7 @@ Built by **Suneel Bose** ([@bosekarmegam](https://github.com/bosekarmegam)).
 - **Geospatial Mapping:** Maps GPS points to `H3` hexagon grids for resolution-9 micro-block analysis.
 - **Dynamic Composite Scoring:** Computes an aggregate CSI (0.0 - 1.0) powered by a dynamically hot-reloadable weights configuration.
 - **Intelligent Anomaly Detection:** Utilizes Redis rolling baselines and Z-score mathematics to fire instantaneous anomaly alerts back into the Kafka bus.
-- **Interactive Dashboarding:** Streamlit dashboard utilizing PyDeck mapping and Altair charting for live geospatial visualization of major cities globally (Default: **Chennai**).
+- **Interactive Dashboarding:** A modern, fully responsive React Single-Page Application (SPA) driven by Vite, featuring MapLibre GL JS and Deck.GL for beautiful geospatial hexagon rendering and dynamic KPI tracking.
 
 ## 🚀 Quickstart (Local Development)
 
@@ -60,14 +60,16 @@ python -m ingestion.consumers.signal_consumer
 uvicorn api.main:app --reload
 ```
 
-**Terminal 3 (Live Dashboard):**
+**Terminal 3 (Live Dashboard - React):**
 ```bash
-streamlit run dashboard/app.py
+cd frontend
+npm install
+npm run dev
 ```
 
 ## 🌐 Deployment (Production)
 To deploy this project to the web, you need a hosting provider. Here is a recommended architecture:
-- **Compute (FastAPI & Streamlit):** Deploy via [Render](https://render.com), [Railway](https://railway.app), or AWS Elastic Beanstalk. Ensure you set environment variables to point to production datastores.
+- **Compute (FastAPI & React):** Deploy via [Render](https://render.com), [Railway](https://railway.app), or Vercel (for frontend). Ensure you set environment variables to point to production datastores.
 - **Event Streaming (Kafka):** Use a managed service like [Confluent Cloud](https://www.confluent.io) to avoid managing Kafka broker state manually.
 - **Caching (Redis):** Use [Upstash](https://upstash.com) or AWS ElastiCache.
 
