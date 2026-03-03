@@ -1,5 +1,8 @@
 import axios from 'axios';
 
+// Configure Axios Defaults for Production (Vercel) -> Backend (Render)
+axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL || '';
+
 // Pseudo-random gaussian for simulated nodes in case backend metrics are sparse
 export const randomGauss = (mean, stdev) => {
     let u = 1 - Math.random();

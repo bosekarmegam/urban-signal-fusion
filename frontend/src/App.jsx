@@ -25,6 +25,9 @@ import { H3HexagonLayer } from '@deck.gl/geo-layers';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { getCityHexes, randomGauss, getColor, fetchCountries, fetchStates, fetchCities } from './utils/locationApi';
 
+// Configure Axios Defaults for Production (Vercel) -> Backend (Render)
+axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL || '';
+
 const Dashboard = () => {
   const [opacity, setOpacity] = useState(60);
   const [isSyncing, setIsSyncing] = useState(false);
