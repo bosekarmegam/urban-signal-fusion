@@ -313,7 +313,7 @@ const Dashboard = () => {
         </div>
       )}
       <DeckGL
-        initialViewState={viewState}
+        viewState={viewState}
         controller={true}
         layers={mapLayers}
         getTooltip={({ object }) => object && `Hex: ${object.hex}\nCSI Score: ${object.csi}\nHeat: ${object.heat}°C\nNoise: ${object.noise}dB\nTransit: ${object.transit}min`}
@@ -532,29 +532,26 @@ const Dashboard = () => {
       <main className="flex-1 flex flex-col h-full w-full overflow-hidden relative">
         <div className="flex-1 p-4 md:p-6 overflow-y-auto flex flex-col h-full w-full">
 
-          {/* --- DESKTOP VIEW --- */}
-          <div className="hidden xl:flex flex-col h-full min-h-min w-full pb-6 xl:pb-0">
+          <div className="shrink-0 mb-4 md:mb-5 xl:mb-6">
             {headerBlock}
-            {kpiBlock}
-            <div className="flex-1 grid grid-cols-1 xl:grid-cols-3 gap-5 xl:min-h-0">
-              <div className="xl:col-span-2 h-full min-h-[450px] xl:min-h-0">
-                {mapBlock}
-              </div>
-              <div className="xl:col-span-1 h-full min-h-[400px] xl:min-h-0 flex flex-col gap-5">
-                {panelsBlock}
-              </div>
-            </div>
           </div>
 
-          {/* --- MOBILE & TABLET VIEW (Scrollable, Map on Top) --- */}
-          <div className="flex xl:hidden flex-col gap-4 md:gap-5 w-full pb-8">
-            {headerBlock}
-            <div className="h-[350px] md:h-[450px] lg:h-[550px] shrink-0 w-full">
+          <div className="flex flex-col xl:grid xl:grid-cols-3 xl:grid-rows-[auto_1fr] flex-1 gap-4 md:gap-5 xl:min-h-0 pb-6 xl:pb-0">
+            {/* KPI Block: Mobile order 2 (below map), Desktop row 1 */}
+            <div className="xl:col-span-3 xl:row-start-1 order-2 xl:order-none shrink-0">
+              {kpiBlock}
+            </div>
+
+            {/* Map Block: Mobile order 1 (above KPI), Desktop row 2 left */}
+            <div className="xl:col-span-2 xl:row-start-2 order-1 xl:order-none h-[350px] md:h-[450px] lg:h-[550px] xl:h-full min-h-0 shrink-0 xl:shrink">
               {mapBlock}
             </div>
-            {kpiBlock}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-5 w-full">
-              {panelsBlock}
+
+            {/* Panels Block: Mobile order 3, Desktop row 2 right */}
+            <div className="xl:col-span-1 xl:row-start-2 order-3 xl:order-none flex flex-col h-auto xl:h-full min-h-0 shrink-0 xl:shrink">
+              <div className="grid grid-cols-1 lg:grid-cols-2 xl:flex xl:flex-col gap-4 md:gap-5 w-full h-full">
+                {panelsBlock}
+              </div>
             </div>
           </div>
 

@@ -8,7 +8,7 @@
   [![FastAPI](https://img.shields.io/badge/FastAPI-0.110.0-009688.svg)](https://fastapi.tiangolo.com)
   [![React](https://img.shields.io/badge/React-18.x-61DAFB.svg)](https://react.dev)
 
-  <h3><a href="https://urban-signal-fusion.streamlit.app/">👉 View Live Dashboard Here 👈</a></h3>
+  <h3><a href="https://urban-signal-fusion.vercel.app/">👉 View Live Dashboard Here 👈</a></h3>
 </div>
 
 ---
