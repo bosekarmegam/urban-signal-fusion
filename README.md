@@ -3,17 +3,38 @@
   <p><strong>Multi-Modal City Stress Score Engine</strong></p>
   <p>A high-performance geospatial data pipeline that captures real-time city rhythms, calculates a City Stress Index (CSI), and flags urban anomalies instantly.</p>
 
+  <!-- Status Badges -->
   [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
   [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
   [![FastAPI](https://img.shields.io/badge/FastAPI-0.110.0-009688.svg)](https://fastapi.tiangolo.com)
   [![React](https://img.shields.io/badge/React-18.x-61DAFB.svg)](https://react.dev)
+  [![GitHub stars](https://img.shields.io/github/stars/bosekarmegam/urban-signal-fusion?style=social)](https://github.com/bosekarmegam/urban-signal-fusion/stargazers)
+  [![Build Status](https://img.shields.io/github/actions/workflow/status/bosekarmegam/urban-signal-fusion/main.yml?branch=main&style=flat)](https://github.com/bosekarmegam/urban-signal-fusion/actions)
 
   <h3><a href="https://urban-signal-fusion.vercel.app/">👉 View Live Dashboard Here 👈</a></h3>
+
+  <!-- Visual Display/Logo/Screenshot -->
+  <img src="./docs/dashboard-preview.png" alt="Urban Signal Fusion Preview" width="800" style="border-radius: 8px; margin-top: 15px; margin-bottom: 20px; box-shadow: 0px 4px 10px rgba(0,0,0,0.5);" />
+
 </div>
 
 ---
 
-## 📖 Overview
+## � Table of Contents
+- [📖 Overview](#-overview)
+- [✨ Key Features](#-key-features)
+- [🚀 Quickstart (Local Development)](#-quickstart-local-development)
+  - [1. Prerequisites](#1-prerequisites)
+  - [2. Setup Environment](#2-setup-environment)
+  - [3. Boot Core Infrastructure (Kafka + Redis)](#3-boot-core-infrastructure-kafka--redis)
+  - [4. Run the Stack](#4-run-the-stack)
+- [🌐 Deployment (Production)](#-deployment-production)
+- [🤝 Contributing](#-contributing)
+- [📜 License](#-license)
+
+---
+
+## �📖 Overview
 Every city block has a rhythm. Stress happens when it breaks. 
 **Urban Signal Fusion** is an open-source ETL pipeline and dashboarding system built to synthesize multi-modal urban inputs (transit delays, crowd density, heat island effects, noise pollution, and infrastructure outages) into a unified **City Stress Index (CSI)** down to the street level using Uber's H3 Hexagonal Grid system.
 
@@ -78,3 +99,7 @@ Contributions are absolutely welcome! Please feel free to submit a Pull Request.
 
 ## 📜 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+> **Developer Note:**
+> Don't forget to upload a custom social media preview image (1280x640px) in the repository settings to ensure a consistent and professional look when sharing project links!
