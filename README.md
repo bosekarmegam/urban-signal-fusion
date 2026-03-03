@@ -9,7 +9,6 @@
   [![FastAPI](https://img.shields.io/badge/FastAPI-0.110.0-009688.svg)](https://fastapi.tiangolo.com)
   [![React](https://img.shields.io/badge/React-18.x-61DAFB.svg)](https://react.dev)
   [![GitHub stars](https://img.shields.io/github/stars/bosekarmegam/urban-signal-fusion?style=social)](https://github.com/bosekarmegam/urban-signal-fusion/stargazers)
-  [![Build Status](https://img.shields.io/github/actions/workflow/status/bosekarmegam/urban-signal-fusion/main.yml?branch=main&style=flat)](https://github.com/bosekarmegam/urban-signal-fusion/actions)
 
   <h3><a href="https://urban-signal-fusion.vercel.app/">👉 View Live Dashboard Here 👈</a></h3>
 
